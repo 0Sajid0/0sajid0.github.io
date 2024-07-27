@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>All product- Burn & Bed</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!--------header---------->
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+         <a href="index.html"><img src="photo/logo 4.jpeg" alt="Logo" width="125px" /></a>
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="all product.html">Products</a></li>
+            
+            <li><a href="account.html">Account</a></li>
+          </ul>
+        </nav>
+        
+        <img
+          src="photo/9042808_menu_icon.png"
+          class="menu-icon"
+          onclick="menutoggle()"
+        />
+      </div>
+    </div>
+
+    <!-----login page------------------------>
+
+    <div class="account-page">
+      <div class="container">
+        <div class="roe">
+          <div class="col-2">
+            <img src="photo/Cloud Sofa.jpeg" width="70%" />
+          </div>
+          <div class="col-2">
+            <div class="form-container">
+               <div class="form-btn">
+                <span onclick="login()">Login</span>
+                <span onclick="register()">Register</span>
+                <hr id="Indicator">
+               </div>
+                <form id="LoginForm" >
+                    <input type="text" placeholder="Username">
+                    <input type="password" placeholder="Password">
+                    <button type="submit" class="btn">Login</button>
+                    <a href="#">Forgot Password?</a>
+                </form>
+                <form id="RegForm">
+                    <input type="text" placeholder="Username">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button type="submit" class="btn">Register</button>
+                   
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-----footer------------------------>
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <img src="photo/logo 4.jpeg" width="125px" />
+            <h3>About Us</h3>
+            <p>
+              Burn & Bad is a leading luxury bedding and furniture brand with a
+              commitment to providing high-quality, comfortable, and stylish
+              products.
+            </p>
+          </div>
+          <div class="footer-col-2">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>Phone: +8801781705870</li>
+              <li>Whatsapp: +8801609266528</li>
+              <li>Email: burnandbedfurniture.com</li>
+              <li>
+                Address:Shop 2,Block-F,11/12 Madrasha Road,<br />Aziz
+                Moholla,Mohammadpur,dhaka-1207
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col-3">
+            <h3>Please Visit Our Social Media Pages</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Instagram</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-----js for toggle menu ------------------>
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
+      MenuItems.style.maxHeight = "0px";
+
+      function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+    <!-----js for login form------------------>
+    <script>
+var LoginForm = document.getElementById("LoginForm");
+var RegForm = document.getElementById("RegForm");
+var Indicator = document.getElementById("Indicator");    
+function register(){
+    RegForm.style.transform = "translatex(0px)";
+    LoginForm.style.transform = "translatex(0px)";
+    Indicator.style.transform = "translatex(100px)";
+}
+
+function login(){
+    RegForm.style.transform = "translatex(300px)";
+    LoginForm.style.transform = "translatex(300px)";
+    Indicator.style.transform = "translatex(0px)";
+}
+    </script>
+  </body>
+</html>
